@@ -1,35 +1,67 @@
-This Jupyter Notebook contains exploratory data analysis and visualizations related to Stellaris, a grand strategy game developed by Paradox Interactive. The notebook analyzes various aspects of the game using Python data science libraries.
+# Stellaris
 
-Features
-Data loading and preprocessing
+Stellaris is a cosmic-themed conversational AI assistant powered by **DialoGPT** for contextual dialogue generation and **SentenceTransformer** for knowledge retrieval. It is designed to answer questions, retrieve space-themed facts, tell jokes, and provide real-time date and time information, all with an interstellar flair.
 
-Visualization of key game metrics
+## Features
 
-Analysis of in-game empires, technologies, and resources
+* Conversational AI with contextual awareness
+* Real-time date and time fetching
+* Wikipedia summary retrieval
+* Space-themed jokes and cosmic facts
+* Basic calculator functions
+* Interactive chatbot experience
 
-Use of popular libraries like:
+## Installation
 
-pandas for data manipulation
+To run Stellaris, make sure you have the following packages installed:
 
-matplotlib and seaborn for plotting
+```bash
+pip install transformers torch sentence-transformers faiss-cpu wikipedia datetime pytz
+```
 
-numpy for numerical operations
+## Usage
 
-Requirements
-To run this notebook, install the following Python packages:
-pip install pandas numpy matplotlib seaborn jupyter
+To start the chatbot, run the following:
 
-Usage
-1. Clone or download this repository.
-2. Open the notebook with Jupyter:
-jupyter notebook Stellaris.ipynb
-3. Run the cells sequentially to view the analysis.
+```python
+from Stellaris import Stellaris
+cosmic_bot = Stellaris()
+cosmic_bot.start_chat()
+```
 
-Notes
-Ensure the dataset required by the notebook is available in the same directory or update the file path accordingly.
+### Commands Supported:
 
-This project is intended for fans of Stellaris who are interested in understanding game mechanics through data.
+* **General Questions**: Just ask anything, and Stellaris will answer.
+* **Time:** `What time is it?`
+* **Date:** `What's the date today?`
+* **Weather:** `How's the weather in Andromeda?`
+* **Jokes:** `Tell me a space joke.`
+* **Wikipedia Lookup:** `Who is Neil Armstrong?`
+* **Math Calculations:** `5 + 3`, `12 * 4`
 
-License
-This project is for educational and non-commercial purposes. 
+To quit the chat, simply type:
 
+```
+quit
+```
+
+## Project Structure
+
+* `Stellaris`: Main class handling chatbot operations
+* `retrieve_knowledge`: Searches for predefined information
+* `generate_response`: Generates AI responses based on context
+* `start_chat`: Launches the interactive chat loop
+
+## Future Enhancements
+
+* Real-time weather API integration for cosmic locations
+* Voice input and output for immersive experience
+* Enhanced conversation memory and context awareness
+
+## Contributions
+
+Contributions are welcome! Please follow the guidelines for pull requests.
+
+## License
+
+This project is licensed under the MIT License.
